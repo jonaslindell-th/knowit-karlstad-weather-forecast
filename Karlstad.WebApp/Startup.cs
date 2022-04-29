@@ -27,7 +27,7 @@ namespace Karlstad.WebApp
         {
             services.AddControllersWithViews();
             services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
-            services.AddScoped<IHttpClientFactory>();
+            services.AddHttpClient("WeatherForecastRepository", c => c.BaseAddress = new Uri("https://api.openweathermap.org"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,9 +55,6 @@ namespace Karlstad.WebApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                        name: ""
-                    );
             });
         }
     }
