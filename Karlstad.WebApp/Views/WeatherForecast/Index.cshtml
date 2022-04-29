@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model WeatherForecast
+
+@foreach(var daily in Model.Daily) {
+    <div>
+        <h2>@daily.Dt</h2>
+        <h3>Morning Temperature: @daily.Temp.Morn</h3>
+        <h3>Day Temperature: @daily.Temp.Day</h3>
+        <h3>Night Temperature: @daily.Temp.Night</h3>
+    </div>
+}
