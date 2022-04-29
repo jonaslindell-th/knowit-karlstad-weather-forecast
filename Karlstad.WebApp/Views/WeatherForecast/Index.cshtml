@@ -1,0 +1,8 @@
+﻿@using Karlstad.WebApp.Services
+@model WeatherForecast
+
+<div class="row">
+      @foreach(var daily in Model.Daily) {
+          <partial name="_DailyWeatherForecast" model="daily" />
+        }
+</div>

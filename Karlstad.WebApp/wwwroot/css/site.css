@@ -59,8 +59,13 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/karlstad.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 .footer {
   position: absolute;
@@ -68,4 +73,23 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.bg-light {
+    background-color: rgb(255,255,255,0.7) !important;
+}
+
+.card-styling {
+    background: #4CA1AF;
+    background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+    background: linear-gradient(to right, rgba(196, 224, 229, 0.8), rgba(76, 161, 175, 0.7));
+}
+
+.card-img-style {
+    width: 70px;
+    height: 70px;
+}
+
+.card-text {
+   font-weight: 500;
 }
