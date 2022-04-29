@@ -7,27 +7,6 @@
 @model WeatherForecast
 <div class="row">
       @foreach(var daily in Model.Daily) {
-            string iconUrl = $"http://openweathermap.org/img/wn/{daily.Weather.FirstOrDefault().Icon}@2x.png";
-            <div class="col-lg-6">
-                <div class="card mb-3 card-styling" style="max-width: 540px;">
-                  <div class="row no-gutters">
-                    <div class="col-md-4 ">
-                      <div class="card-img-style mx-auto d-block">
-                        <img src="@iconUrl" class="card-img" alt="...">
-                      </div>
-                      <p class="text-center card-text">@daily.Weather.FirstOrDefault().Description</p>
-                      <p class="text-center card-text">Wind: @Math.Round(daily.Wind_Speed) m/s</p>
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">@TimeService.UnixTimeStampToString(daily.Dt)</h5>
-                        <p class="card-text">Morning temperature: @Math.Round(daily.Temp.Morn) °C</p>
-                        <p class="card-text">Day temperature: @Math.Round(daily.Temp.Day) °C</p>
-                        <p class="card-text">Night temperature: @Math.Round(daily.Temp.Night) °C</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+          <partial name="_DailyWeatherForecast" model="daily" />
         }
 </div>
