@@ -14,7 +14,7 @@ namespace Karlstad.WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             WeatherForecast weatherForecast = await _weatherForecastRepository.GetKarlstadWeatherForecast();
-            return View();
+            return View(weatherForecast);
         }
     }
 }
