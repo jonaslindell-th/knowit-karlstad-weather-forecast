@@ -61,7 +61,7 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-image: url('../images/karlstad.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/karlstad.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -87,4 +87,8 @@ body {
 .card-img-style {
     width: 70px;
     height: 70px;
+}
+
+.card-text {
+   font-weight: 600;
 }
