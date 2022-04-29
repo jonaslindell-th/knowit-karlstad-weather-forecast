@@ -16,13 +16,14 @@
                         <img src="@iconUrl" class="card-img" alt="...">
                       </div>
                       <p class="text-center card-text">@daily.Weather.FirstOrDefault().Description</p>
+                      <p class="text-center card-text">Wind: @Math.Round(daily.Wind_Speed) m/s</p>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">@TimeService.UnixTimeStampToString(daily.Dt)</h5>
-                        <p class="card-text">Morning temperature: @Math.Round(daily.Temp.Morn)</p>
-                        <p class="card-text">Day temperature: @Math.Round(daily.Temp.Day)</p>
-                        <p class="card-text">Night temperature: @Math.Round(daily.Temp.Night)</p>
+                        <p class="card-text">Morning temperature: @Math.Round(daily.Temp.Morn) °C</p>
+                        <p class="card-text">Day temperature: @Math.Round(daily.Temp.Day) °C</p>
+                        <p class="card-text">Night temperature: @Math.Round(daily.Temp.Night) °C</p>
                       </div>
                     </div>
                   </div>
