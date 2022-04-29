@@ -5,6 +5,6 @@ namespace Karlstad.WebApp.Interfaces
 {
     public interface IWeatherForecastRepository
     {
-        Task<WeatherForecast> GetKarlstadWeatherForecast();
+        Task<IWeatherForecast> GetKarlstadWeatherForecast();
     }
 }
