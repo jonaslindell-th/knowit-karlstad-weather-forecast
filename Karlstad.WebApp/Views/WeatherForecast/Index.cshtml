@@ -6,7 +6,6 @@
 }
 @model WeatherForecast
 <div class="row">
-    
       @foreach(var daily in Model.Daily) {
             string iconUrl = $"http://openweathermap.org/img/wn/{daily.Weather.FirstOrDefault().Icon}@2x.png";
             <div class="col-lg-6">
@@ -30,5 +29,4 @@
                 </div>
             </div>
         }
-    </div>
 </div>
