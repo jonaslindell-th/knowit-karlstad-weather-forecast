@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using Karlstad.WebApp.Interfaces;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 

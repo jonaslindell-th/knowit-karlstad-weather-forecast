@@ -1,4 +1,5 @@
-﻿using Karlstad.WebApp.Models;
+﻿using Karlstad.WebApp.Interfaces;
+using Karlstad.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

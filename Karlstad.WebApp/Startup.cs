@@ -1,3 +1,4 @@
+using Karlstad.WebApp.Interfaces;
 using Karlstad.WebApp.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

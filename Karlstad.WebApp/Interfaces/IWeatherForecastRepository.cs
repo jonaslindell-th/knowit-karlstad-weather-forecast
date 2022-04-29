@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using Karlstad.WebApp.Models;
+using System.Threading.Tasks;
 
-namespace Karlstad.WebApp.Models
+namespace Karlstad.WebApp.Interfaces
 {
     public interface IWeatherForecastRepository
     {
