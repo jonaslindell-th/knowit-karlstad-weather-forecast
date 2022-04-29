@@ -8,4 +8,8 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="2.3.0" />
+  </ItemGroup>
+
 </Project>

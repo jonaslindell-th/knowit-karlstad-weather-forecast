@@ -1,4 +1,5 @@
 ﻿using Karlstad.WebApp.Interfaces;
+using System;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -8,16 +9,16 @@ namespace Karlstad.WebApp.Models
     public class WeatherForecastRepository : IWeatherForecastRepository
     {
         private readonly HttpClient _client;
-        
-        private readonly string path = "/data/2.5/onecall?lat=59.4022&lon=13.5115&exclude=hourly,minutely,current&appid=44d8fe9c81127d78c9852535b3e34e7e&lang=se&units=metric";
+
+        private readonly string path = Environment.GetEnvironmentVariable("params");
 
         public WeatherForecastRepository(IHttpClientFactory client)
         {
             _client = client.CreateClient("WeatherForecastRepository");
         }
-        public async Task<WeatherForecast> GetKarlstadWeatherForecast()
+        public async Task<IWeatherForecast> GetKarlstadWeatherForecast()
         {
-            WeatherForecast weatherForecast = null;
+            IWeatherForecast weatherForecast = null;
 
             HttpResponseMessage response = await _client.GetAsync(path);
 
