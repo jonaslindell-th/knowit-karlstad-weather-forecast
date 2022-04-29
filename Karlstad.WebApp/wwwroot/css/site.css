@@ -79,7 +79,12 @@ body {
 }
 
 .card-styling {
-    background: #fc4a1a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #4CA1AF;
+    background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);
+    background: linear-gradient(to right, rgba(196, 224, 229, 0.8), rgba(76, 161, 175, 0.7));
+}
+
+.card-img-style {
+    width: 70px;
+    height: 70px;
 }
